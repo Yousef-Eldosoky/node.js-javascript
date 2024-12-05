@@ -4,7 +4,7 @@ async function readFileAsync(filePath) {
   try {
     return await fs.readFile(filePath, 'utf8');
   } catch (err) {
-    return err;
+    throw err;
   }
 };
 
@@ -13,7 +13,7 @@ async function writeFileAsync(filePath, content) {
     await fs.writeFile(filePath, content, 'utf8');
     return "file written successfully. Contet: " + content;
   } catch (err) {
-    return `${err.name}: ${err.message}`;
+    throw err;
   }
 }
 
