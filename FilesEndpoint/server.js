@@ -57,7 +57,7 @@ const server = http.createServer(async (req, res) => {
                     return;
                 }
                 data = await fileSystem.writeFileAsync(req.url.slice(lastIndex), body);
-                res.writeHead(200, { 'Content-Type': 'application/json' });
+                res.writeHead(201, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({content: data}));
             });
 
