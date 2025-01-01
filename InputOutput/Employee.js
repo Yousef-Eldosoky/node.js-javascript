@@ -1,4 +1,4 @@
-class Employee {
+export class Employee {
     constructor(name, age, monthlySales) {
         this.name = name;
         this.age = age;
@@ -17,5 +17,3 @@ class Employee {
         return sales;
     }
 }
-
-module.exports = Employee;
