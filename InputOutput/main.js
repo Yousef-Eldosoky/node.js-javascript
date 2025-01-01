@@ -14,16 +14,17 @@ let maxTotalSales = Number.MIN_SAFE_INTEGER
 // name of the employee with the highest total sales
 let maxName = ""
 
-// total for all mployees
+// total for all employees
 let totalSales = 0 
 
 for (let index = 0; index < employees.length; index++) {
     const employee = employees[index];
-    if(employee.totalSales() > maxTotalSales) {
-        maxTotalSales = employee.totalSales();
+    const EmployeeTotalSales = employee.totalSales();
+    if(EmployeeTotalSales > maxTotalSales) {
+        maxTotalSales = EmployeeTotalSales;
         maxName = employee.name;
     }
-    totalSales += employee.totalSales();
+    totalSales += EmployeeTotalSales;
 }
 
 let average = totalSales / employees.length;
